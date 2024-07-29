@@ -89,38 +89,14 @@
 #con.close()     #close a database
 
     # delete values in a table
-# import sqlite3
-# con=sqlite3.connect('mca.db') 
-# con.execute('')
-# con.commit()
-# result=con.execute('select * from users')
-# rows=result.fetchall()      
-# for x in rows:
-#     print(x)
-# con.close()  
-
-
 import sqlite3
 con=sqlite3.connect('mca.db') 
-con=sqlite3.connect('new.db')               #create a database connection
-# con.execute('''create table if not exists users(
-#           id integer primary key,
-#           rollno integer,
-#           name text not null,
-#           age integer)''')
-con.execute('''create table new(
-            dept text not null),
-            rollno integer foregin key, reference(mca),''')
-con.execute(''' insert into users(rollno,name,age)values(?,?,?)''',(101,'sam',21))
-con.execute(''' insert into users(rollno,name,age)values(?,?,?)''',(102,'ram',22))
-con.execute(''' insert into users(rollno,name,age)values(?,?,?)''',(103,'tom',23))
+con.execute('')
 con.commit()
-con.execute(''' insert into new(dept)values(?)''',('bsc'))
-con.commit()
-result=con.execute('select * from new')
-rows=result.fetchall()
+result=con.execute('select * from users')
+rows=result.fetchall()      
 for x in rows:
     print(x)
-con.close()     #close a database
+# con.close()  
 
 

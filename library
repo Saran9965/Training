@@ -1,0 +1,49 @@
+class bookstore:
+    def __init__(self, bname, author, isbn):
+        self.bname = bname
+        self.author = author
+        self.isbn = isbn
+class Library:
+    def __init__(self):
+        self.books = []
+    def adding(self):
+        bname= input("Enter book book name: ")
+        author = input("Enter author: ")
+        isbn = input("Enter ISBN: ")
+        self.books.append(bookstore(bname, author, isbn))
+    def search(self):
+        tags = input("Enter a search tags: ")
+        results = []
+        for bookstore in self.books:
+            if (tags.lower() in bookstore.bname.lower() or tags.lower() in bookstore.author.lower() or tags.lower() in bookstore.isbn.lower()):
+                results.append(bookstore)
+            elif results:
+                print("Searching items related:")
+            for bo in results:
+                print("bookname:",bookstore.bname," Author:",bookstore.author,"ISBN:",bookstore.isbn)
+        else:
+            print("No matching found.")
+
+    def allbooks(self):
+        print("All books:")
+        for bookstore in self.books:
+            print("bookname:",bookstore.bname," Author:",bookstore.author,"ISBN:",bookstore.isbn)
+library = Library()
+while True:
+        print("\nLibrary Management System")
+        print("1. Add book")
+        print("2. Search book")
+        print("3. List all books")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            library.adding()
+        elif choice == "2":
+            library.search()
+        elif choice == "3":
+            library.allbooks()
+        elif choice == "7":
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
