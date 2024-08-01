@@ -31,6 +31,6 @@ model=MultinomialNB()
 model.fit(x,y)
 print(model.score(x_test,y_test))
 
+# sentimental Analysis
 print(model.predict(vec.transform(['love this app simply awasome'])))   #[1] is a positive review  //sentimental analysis
-
 print(model.predict(vec.transform(['its detting stuck alot while using the app']))) #[0] is negative review

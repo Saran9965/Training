@@ -11,7 +11,7 @@ data=pd.DataFrame({
     'petal width':iris.data[:,3],
     'species':iris.target
 })
-data.head()
+print(data.head())
 
 from sklearn.model_selection import train_test_split
 x=data[['sepal length','sepal width','petal length','petal width']]
@@ -25,3 +25,4 @@ y_pred=clf.predict(x_test)
 
 from sklearn import metrics
 print('ACCURACY',metrics.accuracy_score(y_test,y_pred))
+
