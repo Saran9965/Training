@@ -62,3 +62,17 @@ print(xtest[0:10,:])
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression(random_state=0)
 classifier.fit(xtrain, ytrain)
+
+
+
+
+# 1.Linear Regression
+# 2.Logistic Regression
+# 3.SVM (Support Vector Machine)
+# 4.KNN (K-nearest Neighbour)
+# 5.Decision Tree
+# 6.Random Forest
+# 7.Naive Bayes
+# 8.PCA (Principal Component Analysis)
+# 9.Apriori algorithms
+# 10.K-Means Clustering
